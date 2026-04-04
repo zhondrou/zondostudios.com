@@ -6,12 +6,12 @@
   <div class="max-w-5xl mx-auto px-6">
     <h2 class="text-sm font-semibold text-emerald-600 tracking-wide uppercase mb-16">Products</h2>
 
-    <!-- Jarrah Money -->
-    <div class="border border-gray-100 rounded-2xl p-8 sm:p-12">
-      <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 mb-8">
+    <!-- Jarrah Money teaser -->
+    <a href="/jarrah" class="group block border border-gray-100 rounded-2xl p-8 sm:p-12 hover:border-gray-200 transition-colors duration-300">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
         <div>
           <div class="flex items-center gap-3 mb-3">
-            <h3 class="text-2xl sm:text-3xl font-bold tracking-tight">Jarrah Money</h3>
+            <img src="/jarrahlogodark.png" alt="Jarrah Money" class="h-7" />
             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-50 text-emerald-600">
               In Development
             </span>
@@ -19,104 +19,22 @@
           <p class="text-lg text-gray-500 max-w-lg">
             An Australian personal finance app that unifies your accounts, spending, investments, and commitments in one place — with AI-powered budgeting.
           </p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="font-mono text-xs text-gray-500 bg-off-white px-3 py-1.5 rounded-full">Bank sync</span>
+            <span class="font-mono text-xs text-gray-500 bg-off-white px-3 py-1.5 rounded-full">AI budgeting</span>
+            <span class="font-mono text-xs text-gray-500 bg-off-white px-3 py-1.5 rounded-full">Investments</span>
+            <span class="font-mono text-xs text-gray-500 bg-off-white px-3 py-1.5 rounded-full">Australian-first</span>
+          </div>
+        </div>
+        <div class="flex-shrink-0">
+          <span class="inline-flex items-center gap-1.5 text-sm font-medium text-near-black group-hover:text-emerald-600 transition-colors duration-200">
+            Learn more
+            <svg class="w-4 h-4 transform group-hover:translate-x-0.5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </span>
         </div>
       </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="group">
-          <div class="flex items-start gap-3">
-            <div class="w-8 h-8 rounded-lg bg-off-white flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg class="w-4 h-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
-              </svg>
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-near-black mb-1">Bank Sync</div>
-              <p class="text-sm text-gray-500 leading-relaxed">Auto-imports transactions from Australian banks via secure API integration.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="group">
-          <div class="flex items-start gap-3">
-            <div class="w-8 h-8 rounded-lg bg-off-white flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg class="w-4 h-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
-              </svg>
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-near-black mb-1">AI Budget Planner</div>
-              <p class="text-sm text-gray-500 leading-relaxed">Interactive AI-powered budgeting that understands your full financial picture.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="group">
-          <div class="flex items-start gap-3">
-            <div class="w-8 h-8 rounded-lg bg-off-white flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg class="w-4 h-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6z" />
-              </svg>
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-near-black mb-1">Smart Categorization</div>
-              <p class="text-sm text-gray-500 leading-relaxed">100+ categories with vendor matching rules that auto-categorize every transaction.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="group">
-          <div class="flex items-start gap-3">
-            <div class="w-8 h-8 rounded-lg bg-off-white flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg class="w-4 h-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
-              </svg>
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-near-black mb-1">Investment Tracking</div>
-              <p class="text-sm text-gray-500 leading-relaxed">First-class portfolio tracking with gain/loss calculation — not an afterthought.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="group">
-          <div class="flex items-start gap-3">
-            <div class="w-8 h-8 rounded-lg bg-off-white flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg class="w-4 h-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182M2.985 19.644l3.181-3.182" />
-              </svg>
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-near-black mb-1">Commitments</div>
-              <p class="text-sm text-gray-500 leading-relaxed">Tracks recurring obligations with accrual mechanics — know exactly what you owe today.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="group">
-          <div class="flex items-start gap-3">
-            <div class="w-8 h-8 rounded-lg bg-off-white flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg class="w-4 h-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-              </svg>
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-near-black mb-1">Data Quality</div>
-              <p class="text-sm text-gray-500 leading-relaxed">Scores your data completeness and surfaces what needs attention with quick-fix links.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-10 pt-8 border-t border-gray-100">
-        <div class="flex flex-wrap gap-2">
-          <span class="text-xs font-medium text-gray-500 bg-off-white px-3 py-1.5 rounded-full">Australian-first</span>
-          <span class="text-xs font-medium text-gray-500 bg-off-white px-3 py-1.5 rounded-full">AI-powered</span>
-          <span class="text-xs font-medium text-gray-500 bg-off-white px-3 py-1.5 rounded-full">Bank sync</span>
-          <span class="text-xs font-medium text-gray-500 bg-off-white px-3 py-1.5 rounded-full">Flexible periods</span>
-        </div>
-      </div>
-    </div>
+    </a>
   </div>
 </section>

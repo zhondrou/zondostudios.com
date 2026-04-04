@@ -1,0 +1,213 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Jarrah Money — Your Complete Australian Financial Picture"
+  description="An Australian personal finance app that unifies your accounts, spending, investments, and commitments in one place — with AI-powered budgeting."
+>
+  <Nav variant="jarrah" />
+
+  <!-- Hero — Jarrah's dark world -->
+  <section class="relative bg-jarrah-dark pt-16 overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(158,255,31,0.08),transparent_70%)]"></div>
+    <div class="relative max-w-5xl mx-auto px-6 py-32 sm:py-40">
+      <div class="max-w-2xl">
+        <div class="mb-8">
+          <img src="/jarrahlogolight.png" alt="Jarrah Money" class="h-10 sm:h-12" />
+        </div>
+        <div class="w-16 h-0.5 bg-gradient-to-r from-lime to-emerald-600 mb-8"></div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl text-white leading-[1.1] tracking-[0.05em] font-jarrah">
+          Manage your money<br />
+          <span class="text-gray-500">like an accountant.</span>
+        </h1>
+        <p class="mt-6 text-lg text-gray-500 max-w-md leading-relaxed font-mono text-sm">
+          No degree required.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem / Solution -->
+  <section class="py-24 sm:py-32 bg-off-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="max-w-2xl">
+        <h2 class="text-sm font-semibold text-emerald-600 tracking-wide uppercase mb-6">The Problem</h2>
+        <p class="text-2xl sm:text-3xl font-semibold leading-snug tracking-tight">
+          Your finances are fragmented.
+        </p>
+        <div class="mt-6 space-y-4 text-gray-500 leading-relaxed">
+          <p>
+            Multiple bank accounts. Subscriptions you forgot about. Investments in one app, budgets in a spreadsheet, and debts tracked in your head. Every existing tool solves one piece and ignores the rest.
+          </p>
+          <p>
+            Jarrah brings it all into one place — accounts, spending, investments, recurring commitments, and personal debts — so you can see your actual financial position, not a partial view.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshot showcase -->
+  <section class="py-24 sm:py-32">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-sm font-semibold text-emerald-600 tracking-wide uppercase mb-12">The App</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="aspect-[4/3] rounded-2xl bg-jarrah-dark border border-gray-800 overflow-hidden">
+          <img src="/screenshots/dashboard.png" alt="Jarrah Money dashboard" class="w-full h-full object-cover" />
+        </div>
+        <div class="aspect-[4/3] rounded-2xl bg-jarrah-dark border border-gray-800 flex items-center justify-center overflow-hidden">
+          <img src="/screenshots/transactions.png" alt="Transaction categorization" class="w-full h-full object-cover hidden" />
+          <div class="text-center px-6">
+            <p class="text-gray-600 font-mono text-sm">transactions.png</p>
+            <p class="text-gray-700 text-xs mt-1">Drop screenshot in /public/screenshots/</p>
+          </div>
+        </div>
+        <div class="aspect-[4/3] rounded-2xl bg-jarrah-dark border border-gray-800 flex items-center justify-center overflow-hidden">
+          <img src="/screenshots/budgets.png" alt="AI budget planner" class="w-full h-full object-cover hidden" />
+          <div class="text-center px-6">
+            <p class="text-gray-600 font-mono text-sm">budgets.png</p>
+            <p class="text-gray-700 text-xs mt-1">Drop screenshot in /public/screenshots/</p>
+          </div>
+        </div>
+        <div class="aspect-[4/3] rounded-2xl bg-jarrah-dark border border-gray-800 flex items-center justify-center overflow-hidden">
+          <img src="/screenshots/investments.png" alt="Investment tracking" class="w-full h-full object-cover hidden" />
+          <div class="text-center px-6">
+            <p class="text-gray-600 font-mono text-sm">investments.png</p>
+            <p class="text-gray-700 text-xs mt-1">Drop screenshot in /public/screenshots/</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features deep-dive -->
+  <section id="features" class="py-24 sm:py-32 bg-off-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-sm font-semibold text-emerald-600 tracking-wide uppercase mb-16">Features</h2>
+
+      <div class="space-y-20">
+        <!-- Bank Sync -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 items-start">
+          <div>
+            <h3 class="text-xl font-bold tracking-tight mb-3">Bank Sync</h3>
+            <p class="text-gray-500 leading-relaxed">
+              Connects directly to Australian banks to auto-import your transactions in real time. No manual entry, no CSV uploads, no copy-pasting from banking apps. Your data flows in securely through Basiq's banking infrastructure.
+            </p>
+          </div>
+          <div class="flex items-start gap-3 sm:justify-end">
+            <span class="font-mono text-xs text-gray-500 bg-white px-3 py-1.5 rounded-full border border-gray-100">Powered by Basiq</span>
+            <span class="font-mono text-xs text-gray-500 bg-white px-3 py-1.5 rounded-full border border-gray-100">Real-time</span>
+          </div>
+        </div>
+
+        <div class="w-full h-px bg-gray-200"></div>
+
+        <!-- AI Budget Planner -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 items-start">
+          <div>
+            <h3 class="text-xl font-bold tracking-tight mb-3">AI Budget Planner</h3>
+            <p class="text-gray-500 leading-relaxed">
+              An interactive budgeting assistant powered by Claude that actually understands your full financial picture. It asks about your lifestyle, analyses your spending patterns, and proposes budget frameworks — 50/30/20, custom splits, or something built specifically around your situation.
+            </p>
+          </div>
+          <div class="flex items-start gap-3 sm:justify-end">
+            <span class="font-mono text-xs text-gray-500 bg-white px-3 py-1.5 rounded-full border border-gray-100">AI-powered</span>
+            <span class="font-mono text-xs text-gray-500 bg-white px-3 py-1.5 rounded-full border border-gray-100">Interactive</span>
+          </div>
+        </div>
+
+        <div class="w-full h-px bg-gray-200"></div>
+
+        <!-- Smart Categorization -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 items-start">
+          <div>
+            <h3 class="text-xl font-bold tracking-tight mb-3">Smart Categorization</h3>
+            <p class="text-gray-500 leading-relaxed">
+              Over 100 pre-loaded categories with vendor matching rules that automatically categorize every transaction as it arrives. Woolworths hits groceries. Spotify hits subscriptions. You set the rules once, and Jarrah handles the rest. A data quality score shows you what still needs attention.
+            </p>
+          </div>
+          <div class="flex items-start gap-3 sm:justify-end">
+            <span class="font-mono text-xs text-gray-500 bg-white px-3 py-1.5 rounded-full border border-gray-100">100+ categories</span>
+            <span class="font-mono text-xs text-gray-500 bg-white px-3 py-1.5 rounded-full border border-gray-100">Auto-match</span>
+          </div>
+        </div>
+
+        <div class="w-full h-px bg-gray-200"></div>
+
+        <!-- Investment Tracking -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 items-start">
+          <div>
+            <h3 class="text-xl font-bold tracking-tight mb-3">Investment Tracking</h3>
+            <p class="text-gray-500 leading-relaxed">
+              First-class portfolio tracking built in from day one — not bolted on as an afterthought. Track holdings, see gain/loss calculations, and understand how your investments fit into your overall financial picture alongside your spending and commitments.
+            </p>
+          </div>
+          <div class="flex items-start gap-3 sm:justify-end">
+            <span class="font-mono text-xs text-gray-500 bg-white px-3 py-1.5 rounded-full border border-gray-100">Gain/loss</span>
+            <span class="font-mono text-xs text-gray-500 bg-white px-3 py-1.5 rounded-full border border-gray-100">Portfolio view</span>
+          </div>
+        </div>
+
+        <div class="w-full h-px bg-gray-200"></div>
+
+        <!-- Commitments -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 items-start">
+          <div>
+            <h3 class="text-xl font-bold tracking-tight mb-3">Commitments & Provisions</h3>
+            <p class="text-gray-500 leading-relaxed">
+              Most apps tell you what you spent. Jarrah tells you what you owe — right now. Track recurring income and expenses with accrual mechanics: rent, salary, subscriptions, all provisioned so you know exactly where you stand today, not just at the end of the month.
+            </p>
+          </div>
+          <div class="flex items-start gap-3 sm:justify-end">
+            <span class="font-mono text-xs text-gray-500 bg-white px-3 py-1.5 rounded-full border border-gray-100">Accrual-based</span>
+            <span class="font-mono text-xs text-gray-500 bg-white px-3 py-1.5 rounded-full border border-gray-100">Real-time balance</span>
+          </div>
+        </div>
+
+        <div class="w-full h-px bg-gray-200"></div>
+
+        <!-- Flexible Periods -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 items-start">
+          <div>
+            <h3 class="text-xl font-bold tracking-tight mb-3">Flexible Periods</h3>
+            <p class="text-gray-500 leading-relaxed">
+              Not everyone gets paid monthly. Everything in Jarrah works across weekly, fortnightly, monthly, quarterly, or annual periods. Your budget, your commitments, your reporting — all on your schedule.
+            </p>
+          </div>
+          <div class="flex items-start gap-3 sm:justify-end">
+            <span class="font-mono text-xs text-gray-500 bg-white px-3 py-1.5 rounded-full border border-gray-100">Weekly → Annual</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Built with -->
+  <section class="py-16 border-t border-gray-100">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+        <p class="text-sm text-gray-500">Australian-first. Built for AUD, Australian banks, and local vendors.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="font-mono text-xs text-gray-500 bg-off-white px-3 py-1.5 rounded-full">Basiq Banking API</span>
+          <span class="font-mono text-xs text-gray-500 bg-off-white px-3 py-1.5 rounded-full">AI by Claude</span>
+          <span class="font-mono text-xs text-gray-500 bg-off-white px-3 py-1.5 rounded-full">AUD</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to studio -->
+  <section class="py-12 bg-off-white">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <p class="text-sm text-gray-500">
+        Jarrah Money is built by
+        <a href="/" class="text-near-black font-semibold hover:text-emerald-600 transition-colors duration-200">Zondo Studios</a>
+      </p>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
