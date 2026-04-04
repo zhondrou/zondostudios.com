@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-logo: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-emerald-600: #059669;
+  --color-emerald-500: #10B981;
+  --color-emerald-50: #ECFDF5;
+  --color-gray-500: #6B7280;
+  --color-gray-100: #F3F4F6;
+  --color-near-black: #0A0A0A;
+  --color-off-white: #FAFAFA;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--color-emerald-50);
+  color: var(--color-near-black);
+}
