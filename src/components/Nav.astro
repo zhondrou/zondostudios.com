@@ -8,27 +8,88 @@ const isJarrah = variant === "jarrah";
 ---
 
 <nav class:list={[
-  "fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b",
-  isJarrah ? "bg-jarrah-dark/80 border-gray-800/80" : "bg-white/80 border-gray-100/80"
-]}>
+  "fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b",
+  isJarrah ? "bg-jarrah-dark/80 border-white/5" : "bg-white/80 border-gray-100/80"
+]} id="main-nav">
   <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
     <a href="/" class="flex items-center gap-0">
-      <span class:list={[
-        "text-lg font-extrabold tracking-[0.2em] uppercase",
-        isJarrah ? "text-white" : "text-near-black"
-      ]}>Zondo</span>
+      <span class:list={["text-lg font-extrabold tracking-[0.2em] uppercase", isJarrah ? "text-white" : "text-near-black"]}>Zondo</span>
       <span class="text-lg font-light tracking-[0.08em] text-gray-500 uppercase ml-1.5">Studios</span>
     </a>
+
+    <!-- Desktop nav -->
     <div class="hidden sm:flex items-center gap-8">
       {isJarrah ? (
-        <a href="/" class="text-sm font-medium text-gray-500 hover:text-white transition-colors duration-200">Studio</a>
-        <a href="#features" class="text-sm font-medium text-gray-500 hover:text-white transition-colors duration-200">Features</a>
-        <a href="#contact" class="text-sm font-medium text-gray-500 hover:text-white transition-colors duration-200">Contact</a>
+        <a href="/" class="nav-link text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200">Studio</a>
+        <a href="#features" class="nav-link text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200">Features</a>
+        <a href="#contact" class="nav-link text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200">Contact</a>
       ) : (
-        <a href="/#about" class="text-sm font-medium text-gray-500 hover:text-near-black transition-colors duration-200">About</a>
-        <a href="/#products" class="text-sm font-medium text-gray-500 hover:text-near-black transition-colors duration-200">Products</a>
-        <a href="/#contact" class="text-sm font-medium text-gray-500 hover:text-near-black transition-colors duration-200">Contact</a>
+        <a href="/#about" class="nav-link text-sm font-medium text-gray-500 hover:text-near-black transition-colors duration-200">About</a>
+        <a href="/#products" class="nav-link text-sm font-medium text-gray-500 hover:text-near-black transition-colors duration-200">Products</a>
+        <a href="/#contact" class="nav-link text-sm font-medium text-gray-500 hover:text-near-black transition-colors duration-200">Contact</a>
       )}
     </div>
+
+    <!-- Mobile hamburger -->
+    <button class="sm:hidden relative w-6 h-5 flex flex-col justify-between" id="menu-toggle" aria-label="Menu">
+      <span class:list={["block w-full h-0.5 rounded-full transition-all duration-300 origin-center", isJarrah ? "bg-white" : "bg-near-black"]} id="bar-1"></span>
+      <span class:list={["block w-full h-0.5 rounded-full transition-all duration-300", isJarrah ? "bg-white" : "bg-near-black"]} id="bar-2"></span>
+      <span class:list={["block w-full h-0.5 rounded-full transition-all duration-300 origin-center", isJarrah ? "bg-white" : "bg-near-black"]} id="bar-3"></span>
+    </button>
   </div>
 </nav>
+
+<!-- Mobile drawer -->
+<div class="fixed inset-0 z-40 pointer-events-none" id="mobile-drawer">
+  <div class:list={["absolute inset-0 backdrop-blur-xl opacity-0 transition-opacity duration-300", isJarrah ? "bg-jarrah-dark/95" : "bg-white/95"]} id="drawer-bg"></div>
+  <div class="absolute inset-0 flex flex-col items-center justify-center gap-8 translate-x-full transition-transform duration-300 ease-out" id="drawer-content">
+    {isJarrah ? (
+      <a href="/" class="text-3xl font-bold text-white hover:text-emerald-400 transition-colors" data-drawer-link>Studio</a>
+      <a href="#features" class="text-3xl font-bold text-white hover:text-emerald-400 transition-colors" data-drawer-link>Features</a>
+      <a href="#contact" class="text-3xl font-bold text-white hover:text-emerald-400 transition-colors" data-drawer-link>Contact</a>
+    ) : (
+      <a href="/#about" class="text-3xl font-bold text-near-black hover:text-emerald-600 transition-colors" data-drawer-link>About</a>
+      <a href="/#products" class="text-3xl font-bold text-near-black hover:text-emerald-600 transition-colors" data-drawer-link>Products</a>
+      <a href="/#contact" class="text-3xl font-bold text-near-black hover:text-emerald-600 transition-colors" data-drawer-link>Contact</a>
+    )}
+  </div>
+</div>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const drawer = document.getElementById('mobile-drawer');
+  const drawerBg = document.getElementById('drawer-bg');
+  const drawerContent = document.getElementById('drawer-content');
+  const bar1 = document.getElementById('bar-1');
+  const bar2 = document.getElementById('bar-2');
+  const bar3 = document.getElementById('bar-3');
+  let open = false;
+
+  function toggleMenu() {
+    open = !open;
+    if (open) {
+      drawer!.classList.remove('pointer-events-none');
+      drawerBg!.classList.remove('opacity-0');
+      drawerBg!.classList.add('opacity-100');
+      drawerContent!.classList.remove('translate-x-full');
+      drawerContent!.classList.add('translate-x-0');
+      bar1!.style.transform = 'translateY(8px) rotate(45deg)';
+      bar2!.style.opacity = '0';
+      bar3!.style.transform = 'translateY(-8px) rotate(-45deg)';
+    } else {
+      drawer!.classList.add('pointer-events-none');
+      drawerBg!.classList.add('opacity-0');
+      drawerBg!.classList.remove('opacity-100');
+      drawerContent!.classList.add('translate-x-full');
+      drawerContent!.classList.remove('translate-x-0');
+      bar1!.style.transform = '';
+      bar2!.style.opacity = '1';
+      bar3!.style.transform = '';
+    }
+  }
+
+  toggle?.addEventListener('click', toggleMenu);
+  document.querySelectorAll('[data-drawer-link]').forEach(link => {
+    link.addEventListener('click', () => { if (open) toggleMenu(); });
+  });
+</script>

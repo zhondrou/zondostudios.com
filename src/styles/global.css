@@ -1,16 +1,39 @@
 @import "tailwindcss";
 
 @theme {
+  /* Fonts */
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-logo: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-jarrah: "Russo One", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "SF Mono", Menlo, Consolas, monospace;
+
+  /* Surfaces */
+  --color-surface: #0a0a0a;
+  --color-surface-elevated: #111111;
+  --color-surface-secondary: #161616;
+
+  /* Text */
+  --color-text-primary: #F5F5F5;
+  --color-text-secondary: #737373;
+  --color-text-tertiary: #525252;
+
+  /* Borders */
+  --color-border: rgba(255, 255, 255, 0.06);
+  --color-border-hover: rgba(255, 255, 255, 0.12);
+
+  /* Brand */
   --color-emerald-600: #059669;
+  --color-emerald-500: #10B981;
+  --color-emerald-400: #34D399;
+  --color-emerald-50: #ECFDF5;
+  --color-emerald-glow: rgba(5, 150, 105, 0.15);
+
+  /* Jarrah */
   --color-lime: #9eff1f;
   --color-lime-dim: rgba(158, 255, 31, 0.15);
   --color-jarrah-dark: #0a0a0a;
-  --color-emerald-500: #10B981;
-  --color-emerald-50: #ECFDF5;
+
+  /* Legacy (keep for compatibility) */
   --color-gray-500: #6B7280;
   --color-gray-100: #F3F4F6;
   --color-near-black: #0A0A0A;
@@ -24,4 +47,106 @@ html {
 ::selection {
   background-color: var(--color-emerald-50);
   color: var(--color-near-black);
+}
+
+/* ---- Dot grid (light mode) ---- */
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ---- Hero load animations ---- */
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-animate {
+  animation: hero-fade-up 0.8s ease forwards;
+}
+.hero-animate-delay-1 {
+  animation: hero-fade-up 0.8s ease forwards;
+  animation-delay: 0.15s;
+  opacity: 0;
+}
+.hero-animate-delay-2 {
+  animation: hero-fade-up 0.8s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+.hero-animate-delay-3 {
+  animation: hero-fade-up 0.8s ease forwards;
+  animation-delay: 0.45s;
+  opacity: 0;
+}
+
+/* ---- Pulsing status dot ---- */
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.4); }
+  50% { box-shadow: 0 0 0 6px rgba(5, 150, 105, 0); }
+}
+
+.pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* ---- Scroll-triggered reveals ---- */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-animate="fade"] {
+  transform: none;
+}
+
+[data-animate="fade"].is-visible {
+  opacity: 1;
+}
+
+/* Stagger children */
+[data-animate-stagger] > [data-animate] {
+  transition-delay: calc(var(--stagger-index, 0) * 100ms);
+}
+
+/* ---- Gradient text (light mode) ---- */
+.gradient-text {
+  background: linear-gradient(to bottom right, #0A0A0A 30%, #6B7280);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---- Gradient text (dark sections) ---- */
+.gradient-text-dark {
+  background: linear-gradient(to bottom right, #FFFFFF 30%, #525252);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---- Nav link underline ---- */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }

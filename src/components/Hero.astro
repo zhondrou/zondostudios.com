@@ -2,20 +2,73 @@
 
 ---
 
-<section class="min-h-[85vh] flex items-center pt-16">
-  <div class="max-w-5xl mx-auto px-6 w-full">
+<section class="relative min-h-screen flex items-center pt-16 overflow-hidden" id="hero">
+  <!-- Dot grid background -->
+  <div class="absolute inset-0 dot-grid"></div>
+
+  <!-- Radial emerald glow -->
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_600px_400px_at_50%_40%,rgba(5,150,105,0.04),transparent)]"></div>
+
+  <!-- Cursor-tracking glow (JS controlled) -->
+  <div id="cursor-glow" class="absolute inset-0 pointer-events-none opacity-0 transition-opacity duration-500" style="background: radial-gradient(circle 300px at 50% 50%, rgba(5,150,105,0.04), transparent);"></div>
+
+  <!-- Content -->
+  <div class="relative max-w-5xl mx-auto px-6 w-full">
     <div class="max-w-2xl">
-      <div class="flex items-center gap-2 mb-8">
-        <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+      <!-- Status line -->
+      <div class="flex items-center gap-2 mb-8 hero-animate">
+        <span class="w-2 h-2 rounded-full bg-emerald-600 pulse-dot"></span>
         <span class="text-sm font-medium text-gray-500 tracking-wide uppercase">Independent Software Studio</span>
       </div>
-      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
-        We build apps<br />
-        <span class="text-gray-500">that solve<br />real problems.</span>
+
+      <!-- Heading -->
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight hero-animate-delay-1">
+        <span class="gradient-text">We make apps.<br />Good ones.</span>
       </h1>
-      <p class="mt-8 text-lg text-gray-500 max-w-md leading-relaxed">
-        Zondo Studios is an Australian software studio crafting thoughtful applications in fintech, AI, and beyond.
+
+      <!-- Subtitle -->
+      <p class="mt-8 text-lg text-gray-500 max-w-md leading-relaxed hero-animate-delay-2">
+        Australian software studio. Fintech, AI, and whatever's next.
       </p>
+
+      <!-- CTA -->
+      <div class="mt-10 hero-animate-delay-3">
+        <a
+          href="#products"
+          class="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-emerald-400 border border-emerald-600/30 rounded-full hover:border-emerald-600/60 hover:shadow-[0_0_20px_-5px_rgba(5,150,105,0.3)] transition-all duration-300"
+        >
+          See our work
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+          </svg>
+        </a>
+      </div>
     </div>
   </div>
+
+  <!-- Bottom fade to next section -->
+  <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
 </section>
+
+<script>
+  // Cursor-tracking glow on hero
+  const hero = document.getElementById('hero');
+  const glow = document.getElementById('cursor-glow');
+
+  if (hero && glow) {
+    hero.addEventListener('mouseenter', () => {
+      glow.style.opacity = '1';
+    });
+
+    hero.addEventListener('mouseleave', () => {
+      glow.style.opacity = '0';
+    });
+
+    hero.addEventListener('mousemove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      glow.style.background = `radial-gradient(circle 300px at ${x}px ${y}px, rgba(5,150,105,0.04), transparent)`;
+    });
+  }
+</script>
