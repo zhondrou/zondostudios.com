@@ -5,7 +5,7 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout
-  title="Zondo Studios — Brand Kit"
+  title="Zondo Studios Brand Kit"
   description="Brand guidelines, logos, and assets for Zondo Studios."
 >
   <Nav />
@@ -17,64 +17,144 @@ import Footer from "../components/Footer.astro";
     </div>
   </section>
 
-  <!-- Colors -->
+  <!-- Color Palette -->
   <section class="py-16">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-sm font-semibold text-emerald-600 tracking-wide uppercase mb-8">Color Palette</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+      <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-8">Color Palette</h2>
+
+      <!-- Brand gradients -->
+      <div class="space-y-6">
         <div>
-          <div class="aspect-square rounded-xl bg-surface border border-gray-100"></div>
-          <p class="mt-2 text-sm font-semibold text-near-black">Surface</p>
-          <p class="text-xs text-gray-500 font-mono">#0A0A0A</p>
+          <p class="text-xs text-gray-500 font-mono uppercase tracking-wide mb-3">Teal — primary</p>
+          <div class="h-16 rounded-xl" style="background: linear-gradient(to right, #56C7C0 0%, #2A86A8 55%, #1E5A8E 100%);"></div>
+          <div class="mt-3 grid grid-cols-3 gap-4 text-xs font-mono text-gray-500">
+            <span>#56C7C0 &middot; 500</span>
+            <span class="text-center">#2A86A8 &middot; 600</span>
+            <span class="text-right">#1E5A8E &middot; 700</span>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-xs text-gray-500 font-mono uppercase tracking-wide mb-3">Coral — secondary</p>
+          <div class="h-16 rounded-xl" style="background: linear-gradient(to right, #F2BC9C 0%, #E8865B 55%, #C0533F 100%);"></div>
+          <div class="mt-3 grid grid-cols-3 gap-4 text-xs font-mono text-gray-500">
+            <span>#F2BC9C &middot; 500</span>
+            <span class="text-center">#E8865B &middot; 600</span>
+            <span class="text-right">#C0533F &middot; 700</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Supporting -->
+      <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div>
+          <div class="aspect-square rounded-xl" style="background: #0F1115;"></div>
+          <p class="mt-2 text-sm font-semibold text-charcoal">Charcoal</p>
+          <p class="text-xs text-gray-500 font-mono">#0F1115</p>
         </div>
         <div>
-          <div class="aspect-square rounded-xl bg-off-white border border-gray-100"></div>
-          <p class="mt-2 text-sm font-semibold text-near-black">Elevated</p>
-          <p class="text-xs text-gray-500 font-mono">#111111</p>
+          <div class="aspect-square rounded-xl border border-gray-100" style="background: #FAFAFA;"></div>
+          <p class="mt-2 text-sm font-semibold text-charcoal">Off-white</p>
+          <p class="text-xs text-gray-500 font-mono">#FAFAFA</p>
         </div>
         <div>
-          <div class="aspect-square rounded-xl bg-emerald-600"></div>
-          <p class="mt-2 text-sm font-semibold text-near-black">Emerald</p>
-          <p class="text-xs text-gray-500 font-mono">#059669</p>
+          <div class="aspect-square rounded-xl" style="background: #6B7280;"></div>
+          <p class="mt-2 text-sm font-semibold text-charcoal">Gray</p>
+          <p class="text-xs text-gray-500 font-mono">#6B7280</p>
         </div>
         <div>
-          <div class="aspect-square rounded-xl bg-emerald-500"></div>
-          <p class="mt-2 text-sm font-semibold text-near-black">Emerald Light</p>
-          <p class="text-xs text-gray-500 font-mono">#10B981</p>
-        </div>
-        <div>
-          <div class="aspect-square rounded-xl" style="background: #F5F5F5;"></div>
-          <p class="mt-2 text-sm font-semibold text-near-black">Text Primary</p>
-          <p class="text-xs text-gray-500 font-mono">#F5F5F5</p>
-        </div>
-        <div>
-          <div class="aspect-square rounded-xl" style="background: #737373;"></div>
-          <p class="mt-2 text-sm font-semibold text-near-black">Text Secondary</p>
-          <p class="text-xs text-gray-500 font-mono">#737373</p>
+          <div class="aspect-square rounded-xl" style="background: #E8F4F7;"></div>
+          <p class="mt-2 text-sm font-semibold text-charcoal">Teal Tint</p>
+          <p class="text-xs text-gray-500 font-mono">#E8F4F7</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Typography -->
+  <!-- Mark Construction -->
   <section class="py-16 bg-off-white">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-sm font-semibold text-emerald-600 tracking-wide uppercase mb-8">Typography</h2>
+      <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-3">Mark Construction</h2>
+      <p class="text-gray-500 mb-8 max-w-lg">Two layered Z-shapes — a coral back layer and a teal front layer — combine into a single mark with depth.</p>
+      <div class="grid grid-cols-3 gap-4 sm:gap-6 items-center">
+        <div class="border border-gray-100 rounded-2xl p-6 sm:p-10 flex items-center justify-center bg-white aspect-square">
+          <img src="/brand/zondo-mark-mono-light.svg" alt="Back layer (coral position)" class="w-full h-auto max-w-[140px]" style="filter: hue-rotate(0deg);" />
+        </div>
+        <div class="text-center text-3xl text-gray-500 font-light">+</div>
+        <div class="border border-gray-100 rounded-2xl p-6 sm:p-10 flex items-center justify-center bg-white aspect-square">
+          <img src="/brand/zondo-mark.svg" alt="Composed mark" class="w-full h-auto max-w-[140px]" />
+        </div>
+      </div>
+      <p class="mt-4 text-xs text-gray-500 font-mono">Layered geometry &middot; gradient depth &middot; soft rounded joins</p>
+    </div>
+  </section>
+
+  <!-- Mark Variants -->
+  <section class="py-16">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-8">Mark</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="border border-gray-100 rounded-2xl p-10 flex items-center justify-center aspect-square bg-white">
+          <img src="/brand/zondo-mark.svg" alt="Zondo mark, full color" class="w-32 h-32" />
+        </div>
+        <div class="rounded-2xl p-10 flex items-center justify-center aspect-square" style="background: #0F1115;">
+          <img src="/brand/zondo-mark-mono-light.svg" alt="Zondo mark, white on dark" class="w-32 h-32" />
+        </div>
+        <div class="border border-gray-100 rounded-2xl p-10 flex items-center justify-center aspect-square bg-white">
+          <img src="/brand/zondo-mark-mono-dark.svg" alt="Zondo mark, dark on light" class="w-32 h-32" />
+        </div>
+      </div>
+      <p class="mt-4 text-xs text-gray-500 font-mono">
+        Downloads:
+        <a href="/brand/zondo-mark.svg" class="text-teal-700 hover:underline" download>Color SVG</a> &middot;
+        <a href="/brand/zondo-mark.png" class="text-teal-700 hover:underline" download>Color PNG</a> &middot;
+        <a href="/brand/zondo-mark-mono-dark.svg" class="text-teal-700 hover:underline" download>Mono dark</a> &middot;
+        <a href="/brand/zondo-mark-mono-light.svg" class="text-teal-700 hover:underline" download>Mono light</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Lockups -->
+  <section class="py-16 bg-off-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-8">Lockups</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="border border-gray-100 rounded-2xl p-10 flex items-center justify-center bg-white aspect-[4/3]">
+          <img src="/brand/zondo-lockup-horizontal.svg" alt="Zondo horizontal lockup" class="w-full max-w-[280px] h-auto" />
+        </div>
+        <div class="border border-gray-100 rounded-2xl p-10 flex items-center justify-center bg-white aspect-[4/3]">
+          <img src="/brand/zondo-lockup-stacked.svg" alt="Zondo stacked lockup" class="h-full max-h-[200px] w-auto" />
+        </div>
+      </div>
+      <p class="mt-4 text-xs text-gray-500 font-mono">
+        Downloads:
+        <a href="/brand/zondo-lockup-horizontal.svg" class="text-teal-700 hover:underline" download>Horizontal SVG</a> &middot;
+        <a href="/brand/zondo-lockup-horizontal.png" class="text-teal-700 hover:underline" download>Horizontal PNG</a> &middot;
+        <a href="/brand/zondo-lockup-stacked.svg" class="text-teal-700 hover:underline" download>Stacked SVG</a> &middot;
+        <a href="/brand/zondo-lockup-stacked.png" class="text-teal-700 hover:underline" download>Stacked PNG</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Typography -->
+  <section class="py-16">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-8">Typography</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
         <div>
-          <p class="text-xs text-gray-500 font-mono uppercase tracking-wide mb-3">Primary — Inter</p>
-          <p class="text-4xl font-extrabold tracking-tight text-near-black">Extrabold 800</p>
-          <p class="text-3xl font-bold tracking-tight text-near-black mt-2">Bold 700</p>
-          <p class="text-2xl font-semibold text-near-black mt-2">Semibold 600</p>
-          <p class="text-xl font-medium text-near-black mt-2">Medium 500</p>
-          <p class="text-lg text-near-black mt-2">Regular 400</p>
+          <p class="text-xs text-gray-500 font-mono uppercase tracking-wide mb-3">Primary, Inter</p>
+          <p class="text-4xl font-extrabold tracking-tight text-charcoal">Extrabold 800</p>
+          <p class="text-3xl font-bold tracking-tight text-charcoal mt-2">Bold 700</p>
+          <p class="text-2xl font-semibold text-charcoal mt-2">Semibold 600</p>
+          <p class="text-xl font-medium text-charcoal mt-2">Medium 500</p>
+          <p class="text-lg text-charcoal mt-2">Regular 400</p>
         </div>
         <div>
           <p class="text-xs text-gray-500 font-mono uppercase tracking-wide mb-3">Usage</p>
           <div class="space-y-4">
             <div class="flex items-baseline gap-4">
               <span class="text-xs text-gray-500 font-mono w-24 flex-shrink-0">Headings</span>
-              <span class="font-bold text-near-black">Inter Bold / Extrabold</span>
+              <span class="font-bold text-charcoal">Inter Bold / Extrabold</span>
             </div>
             <div class="flex items-baseline gap-4">
               <span class="text-xs text-gray-500 font-mono w-24 flex-shrink-0">Body</span>
@@ -82,137 +162,62 @@ import Footer from "../components/Footer.astro";
             </div>
             <div class="flex items-baseline gap-4">
               <span class="text-xs text-gray-500 font-mono w-24 flex-shrink-0">Labels</span>
-              <span class="text-sm font-semibold tracking-wide uppercase text-emerald-600">Inter Semibold, Uppercase</span>
+              <span class="text-sm font-semibold tracking-wide uppercase text-teal-600">Inter Semibold, Uppercase</span>
             </div>
-            <div class="flex items-baseline gap-4">
+            <div class="flex items-center gap-4">
               <span class="text-xs text-gray-500 font-mono w-24 flex-shrink-0">Logo</span>
-              <span class="font-extrabold tracking-[0.2em] uppercase text-near-black">ZONDO</span>
-              <span class="font-light tracking-[0.08em] text-gray-500 uppercase">Studios</span>
+              <img src="/brand/zondo-lockup-horizontal.svg" alt="Zondo Studios" class="h-7 w-auto" />
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Wordmark -->
-  <section class="py-16">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-sm font-semibold text-emerald-600 tracking-wide uppercase mb-8">Wordmark</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-        <div class="border border-gray-100 rounded-2xl p-8 flex items-center justify-center aspect-[3/2] bg-white">
-          <div>
-            <span class="text-2xl font-extrabold tracking-[0.2em] text-near-black uppercase">Zondo</span>
-            <span class="text-2xl font-light tracking-[0.08em] text-gray-500 uppercase ml-2">Studios</span>
-          </div>
-        </div>
-        <div class="bg-off-white border border-gray-100 rounded-2xl p-8 flex items-center justify-center aspect-[3/2]">
-          <div>
-            <span class="text-2xl font-extrabold tracking-[0.2em] text-white uppercase">Zondo</span>
-            <span class="text-2xl font-light tracking-[0.08em] text-white/50 uppercase ml-2">Studios</span>
-          </div>
-        </div>
-        <div class="bg-emerald-600 rounded-2xl p-8 flex items-center justify-center aspect-[3/2]">
-          <div>
-            <span class="text-2xl font-extrabold tracking-[0.2em] text-white uppercase">Zondo</span>
-            <span class="text-2xl font-light tracking-[0.08em] text-white/60 uppercase ml-2">Studios</span>
-          </div>
-        </div>
-      </div>
-      <p class="mt-4 text-xs text-gray-500 font-mono">SVG downloads: <a href="/brand/zondo-wordmark-dark.svg" class="text-emerald-600 hover:underline" download>Dark</a> &middot; <a href="/brand/zondo-wordmark-light.svg" class="text-emerald-600 hover:underline" download>Light</a> &middot; <a href="/brand/zondo-wordmark-emerald.svg" class="text-emerald-600 hover:underline" download>Emerald</a></p>
-    </div>
-  </section>
-
-  <!-- Icon Mark -->
-  <section class="py-16 bg-off-white">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-sm font-semibold text-emerald-600 tracking-wide uppercase mb-8">Icon Mark</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
-        <div class="border border-gray-100 rounded-2xl p-8 flex items-center justify-center">
-          <img src="/brand/zondo-icon-dark.svg" alt="Zondo icon dark" class="w-20 h-20" />
-        </div>
-        <div class="border border-gray-100 rounded-2xl p-8 flex items-center justify-center">
-          <img src="/brand/zondo-icon-emerald.svg" alt="Zondo icon emerald" class="w-20 h-20" />
-        </div>
-        <div class="bg-white rounded-2xl p-8 flex items-center justify-center">
-          <img src="/brand/zondo-icon-light.svg" alt="Zondo icon light" class="w-20 h-20" />
-        </div>
-        <div class="border border-gray-100 rounded-2xl p-8 flex items-center justify-center">
-          <img src="/brand/zondo-icon-dark.svg" alt="Zondo icon on dark" class="w-20 h-20" />
-        </div>
-      </div>
-      <p class="mt-4 text-xs text-gray-500 font-mono">SVG downloads: <a href="/brand/zondo-icon-dark.svg" class="text-emerald-600 hover:underline" download>Dark</a> &middot; <a href="/brand/zondo-icon-emerald.svg" class="text-emerald-600 hover:underline" download>Emerald</a> &middot; <a href="/brand/zondo-icon-light.svg" class="text-emerald-600 hover:underline" download>Light</a></p>
-    </div>
-  </section>
-
-  <!-- Lockup -->
-  <section class="py-16">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-sm font-semibold text-emerald-600 tracking-wide uppercase mb-8">Lockup</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div class="border border-gray-100 rounded-2xl p-12 flex items-center gap-5">
-          <img src="/brand/zondo-icon-dark.svg" alt="Zondo icon" class="w-16 h-16 flex-shrink-0" />
-          <div>
-            <div class="text-xl font-extrabold tracking-[0.2em] text-near-black uppercase">Zondo</div>
-            <div class="text-xs font-light tracking-[0.15em] text-gray-500 uppercase">Studios</div>
-          </div>
-        </div>
-        <div class="bg-white rounded-2xl p-12 flex items-center gap-5">
-          <img src="/brand/zondo-icon-light.svg" alt="Zondo icon light" class="w-16 h-16 flex-shrink-0" />
-          <div>
-            <div class="text-xl font-extrabold tracking-[0.2em] text-near-black uppercase">Zondo</div>
-            <div class="text-xs font-light tracking-[0.15em] text-gray-500 uppercase">Studios</div>
-          </div>
-        </div>
-      </div>
-      <p class="mt-4 text-xs text-gray-500 font-mono">SVG downloads: <a href="/brand/zondo-lockup-dark.svg" class="text-emerald-600 hover:underline" download>Dark</a> &middot; <a href="/brand/zondo-lockup-light.svg" class="text-emerald-600 hover:underline" download>Light</a></p>
     </div>
   </section>
 
   <!-- Usage Guidelines -->
   <section class="py-16 bg-off-white">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-sm font-semibold text-emerald-600 tracking-wide uppercase mb-8">Usage Guidelines</h2>
+      <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-8">Usage Guidelines</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
         <div>
-          <h3 class="font-bold text-near-black mb-3">Do</h3>
+          <h3 class="font-bold text-charcoal mb-3">Do</h3>
           <ul class="space-y-2 text-sm text-gray-500">
             <li class="flex items-start gap-2">
-              <span class="text-emerald-600 mt-0.5">&#10003;</span>
-              Use the wordmark on clean, uncluttered backgrounds
+              <span class="text-teal-700 mt-0.5">&#10003;</span>
+              Preserve the gradient direction on the mark
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-emerald-600 mt-0.5">&#10003;</span>
-              Maintain generous clear space around the logo
+              <span class="text-teal-700 mt-0.5">&#10003;</span>
+              Maintain generous clear space around the lockup
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-emerald-600 mt-0.5">&#10003;</span>
-              Use the icon mark for small formats (favicons, app icons, avatars)
+              <span class="text-teal-700 mt-0.5">&#10003;</span>
+              Use the mono variants when context requires single-color reproduction
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-emerald-600 mt-0.5">&#10003;</span>
-              Use the light variant on dark backgrounds, dark on light
+              <span class="text-teal-700 mt-0.5">&#10003;</span>
+              Use the mark alone for small formats (favicons, app icons, avatars)
             </li>
           </ul>
         </div>
         <div>
-          <h3 class="font-bold text-near-black mb-3">Don't</h3>
+          <h3 class="font-bold text-charcoal mb-3">Don't</h3>
           <ul class="space-y-2 text-sm text-gray-500">
             <li class="flex items-start gap-2">
-              <span class="text-red-500 mt-0.5">&#10005;</span>
-              Alter the letter-spacing or font weight of the wordmark
+              <span class="text-coral-700 mt-0.5">&#10005;</span>
+              Recolor or flatten the gradient of the mark
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-red-500 mt-0.5">&#10005;</span>
-              Place the logo on busy or low-contrast backgrounds
+              <span class="text-coral-700 mt-0.5">&#10005;</span>
+              Place the mark on busy or low-contrast backgrounds
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-red-500 mt-0.5">&#10005;</span>
-              Stretch, rotate, or apply effects to the logo
+              <span class="text-coral-700 mt-0.5">&#10005;</span>
+              Stretch, rotate, or apply effects to the lockup
             </li>
             <li class="flex items-start gap-2">
-              <span class="text-red-500 mt-0.5">&#10005;</span>
-              Use colors outside the defined palette
+              <span class="text-coral-700 mt-0.5">&#10005;</span>
+              Re-typeset the wordmark in a different typeface
             </li>
           </ul>
         </div>
@@ -220,21 +225,21 @@ import Footer from "../components/Footer.astro";
     </div>
   </section>
 
-  <!-- Brand Values -->
+  <!-- Brand Voice -->
   <section class="py-16">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-sm font-semibold text-emerald-600 tracking-wide uppercase mb-8">Brand Voice</h2>
+      <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-8">Brand Voice</h2>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
         <div class="rounded-xl border border-gray-100 bg-white p-6">
-          <h3 class="font-bold text-near-black mb-2">Confident, not loud</h3>
+          <h3 class="font-bold text-charcoal mb-2">Confident, not loud</h3>
           <p class="text-sm text-gray-500 leading-relaxed">We let the work speak. No hype, no buzzwords, no exclamation marks. Clear, direct statements.</p>
         </div>
         <div class="rounded-xl border border-gray-100 bg-white p-6">
-          <h3 class="font-bold text-near-black mb-2">Technical, not jargony</h3>
+          <h3 class="font-bold text-charcoal mb-2">Technical, not jargony</h3>
           <p class="text-sm text-gray-500 leading-relaxed">We speak with precision. We explain complex things simply without dumbing them down.</p>
         </div>
         <div class="rounded-xl border border-gray-100 bg-white p-6">
-          <h3 class="font-bold text-near-black mb-2">Independent, not scrappy</h3>
+          <h3 class="font-bold text-charcoal mb-2">Independent, not scrappy</h3>
           <p class="text-sm text-gray-500 leading-relaxed">Small by design, not by accident. We frame our size as focus, not limitation.</p>
         </div>
       </div>
