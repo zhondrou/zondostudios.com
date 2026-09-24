@@ -36,5 +36,75 @@
         </div>
       </div>
     </a>
+
+    <!-- Deal Estate teaser -->
+    <a href="/deal-estate/" class="de-card group block mt-6 rounded-2xl border p-8 sm:p-12 hover:-translate-y-0.5 transition-all duration-300" data-animate>
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+        <div>
+          <div class="flex items-center gap-3 mb-3">
+            <img src="/deal-estate/logo.webp" alt="Deal Estate" class="h-9 w-auto" />
+            <span class="de-pill inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold">
+              In Development
+            </span>
+          </div>
+          <p class="text-lg text-gray-500 max-w-lg">
+            A fast property-dealing card game. Build sets, dodge rent, and outmaneuver opponents offline or online.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="de-tag inline-flex items-center text-xs font-semibold px-3 py-1 rounded-full">
+              Offline vs AI
+            </span>
+            <span class="de-tag de-tag-online inline-flex items-center text-xs font-semibold px-3 py-1 rounded-full">
+              Online ranked multiplayer
+            </span>
+            <span class="de-tag inline-flex items-center text-xs font-semibold px-3 py-1 rounded-full">
+              Global leaderboard
+            </span>
+            <span class="de-tag inline-flex items-center text-xs font-semibold px-3 py-1 rounded-full">
+              Friends &amp; rivals
+            </span>
+          </div>
+        </div>
+        <div class="flex-shrink-0">
+          <span class="de-link inline-flex items-center gap-1.5 text-sm font-bold transition-colors duration-200">
+            View Deal Estate
+            <svg class="w-4 h-4 transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H18.75v5.25M18 6.75L8.25 16.5" />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </a>
   </div>
 </section>
+
+<style>
+  /* Deal Estate brand — sourced from the app's own theme (app_theme.dart), scoped to this card only */
+  .de-card {
+    border-color: rgba(242, 193, 53, 0.35);
+    background: #fffdf5;
+  }
+  .de-card:hover {
+    border-color: #f2c135;
+    box-shadow: 0 0 40px -10px rgba(242, 193, 53, 0.35);
+  }
+  .de-pill {
+    color: #1a1a1a;
+    background: linear-gradient(to bottom, #f2c135, #de9e12);
+    font-family: "Nunito", sans-serif;
+  }
+  .de-tag {
+    color: #1a1a1a;
+    background: #eeebdf;
+    font-family: "Nunito", sans-serif;
+  }
+  .de-tag-online {
+    color: #1a6bb5;
+  }
+  .de-link {
+    color: #1a1a1a;
+  }
+  .group:hover .de-link {
+    color: #b9790e;
+  }
+</style>

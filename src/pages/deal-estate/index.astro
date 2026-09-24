@@ -1,0 +1,122 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout
+  title="Deal Estate | Zondo Studios"
+  description="Deal Estate is a fast property-dealing card game from Zondo Studios. Build sets, dodge rent, and outmaneuver opponents offline or online."
+>
+  <link slot="head" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <Nav />
+
+  <section class="de-hero pt-32 pb-12">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="flex items-center gap-4 mb-6">
+        <img src="/deal-estate/logo.webp" alt="Deal Estate" class="h-16 w-auto" />
+        <span class="de-pill inline-flex items-center px-3 py-1 rounded-full text-xs font-bold">
+          In Development
+        </span>
+      </div>
+      <h1 class="de-display text-5xl sm:text-6xl text-[#1A1A1A]">Deal Estate</h1>
+      <p class="de-body mt-4 text-lg text-gray-600 max-w-lg">
+        A fast property-dealing card game. Build sets, dodge rent, and outmaneuver opponents offline or online.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        <span class="de-tag inline-flex items-center text-xs font-semibold px-3 py-1 rounded-full">
+          Offline vs AI
+        </span>
+        <span class="de-tag de-tag-online inline-flex items-center text-xs font-semibold px-3 py-1 rounded-full">
+          Online ranked multiplayer
+        </span>
+        <span class="de-tag inline-flex items-center text-xs font-semibold px-3 py-1 rounded-full">
+          Global leaderboard
+        </span>
+        <span class="de-tag inline-flex items-center text-xs font-semibold px-3 py-1 rounded-full">
+          Friends &amp; rivals
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <section class="de-hero pb-32">
+    <div class="max-w-3xl mx-auto px-6 space-y-12">
+      <div>
+        <h2 class="de-eyebrow text-sm font-bold tracking-wide uppercase mb-4">About the game</h2>
+        <div class="de-body space-y-4 text-gray-600 leading-relaxed">
+          <p>
+            Deal Estate is a cross-platform property-dealing card game with its own original mechanics and card names. Play offline against AI, or jump into online real-time ranked multiplayer and climb a global leaderboard rated with the Glicko-2 system.
+          </p>
+          <p>
+            Deal Estate is free to play, with no in-app purchases and no ads. The ranked leaderboard is cosmetic only. There's no wagering, no real-money prizes, and no gambling of any kind.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="de-eyebrow text-sm font-bold tracking-wide uppercase mb-4">Get Deal Estate</h2>
+        <div class="de-body space-y-4 text-gray-600 leading-relaxed">
+          <p>
+            Deal Estate is in active development and isn't publicly available yet. iOS is coming first, with Android to follow.
+          </p>
+          <span class="de-coming-soon inline-flex items-center gap-2 text-sm font-bold px-6 py-3.5 rounded-lg cursor-not-allowed" aria-disabled="true">
+            Coming soon
+          </span>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-4">Legal</h2>
+        <div class="space-y-4 text-gray-500 leading-relaxed">
+          <p>
+            Deal Estate has its own Terms of Service and Privacy Policy, separate from the rest of zondostudios.com:
+          </p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><a href="/deal-estate/terms" class="text-teal-700 hover:underline">Deal Estate Terms of Service</a></li>
+            <li><a href="/deal-estate/privacy" class="text-teal-700 hover:underline">Deal Estate Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* Deal Estate brand — sourced from the app's own theme (app_theme.dart), scoped to this page only */
+  .de-hero {
+    background: #fffdf5;
+  }
+  .de-display {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.02em;
+  }
+  .de-body {
+    font-family: "Nunito", sans-serif;
+  }
+  .de-eyebrow {
+    font-family: "Nunito", sans-serif;
+    color: #b9790e;
+  }
+  .de-pill {
+    font-family: "Nunito", sans-serif;
+    color: #1a1a1a;
+    background: linear-gradient(to bottom, #f2c135, #de9e12);
+  }
+  .de-tag {
+    font-family: "Nunito", sans-serif;
+    color: #1a1a1a;
+    background: #eeebdf;
+  }
+  .de-tag-online {
+    color: #1a6bb5;
+  }
+  .de-coming-soon {
+    font-family: "Nunito", sans-serif;
+    color: #8a8a7a;
+    background: #eeebdf;
+    border: 2px solid #d0ccaf;
+  }
+</style>

@@ -1,0 +1,213 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
+
+const lastUpdated = "24 September 2026";
+---
+
+<Layout
+  title="Deal Estate Privacy Policy | Zondo Studios"
+  description="How Zondo Studios handles personal information collected through Deal Estate, a mobile card game."
+>
+  <Nav />
+
+  <section class="pt-32 pb-12">
+    <div class="max-w-3xl mx-auto px-6">
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight gradient-text">Deal Estate Privacy Policy</h1>
+      <p class="mt-4 text-sm text-gray-500 font-mono">Last updated {lastUpdated}</p>
+    </div>
+  </section>
+
+  <section class="pb-32">
+    <div class="max-w-3xl mx-auto px-6 space-y-12">
+      <div>
+        <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-4">1. Introduction</h2>
+        <div class="space-y-4 text-gray-500 leading-relaxed">
+          <p>
+            Deal Estate is a mobile card game operated by Zondo Studios ("we", "us", or "our"), an independent Australian software studio, available as an app for iOS and Android. This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you use Deal Estate.
+          </p>
+          <p>
+            Deal Estate is available to players worldwide. We are operated from Australia and apply the Australian Privacy Principles under the Privacy Act 1988 (Cth) as our baseline. If you live elsewhere, the privacy rights granted by your local law (for example the EU/UK GDPR, the UK Data Protection Act, California's CCPA/CPRA, or equivalent statutes) apply in addition to this policy and are not waived by anything in it.
+          </p>
+          <p>
+            By using Deal Estate, you consent to the practices described in this policy.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-4">2. Information We Collect</h2>
+        <div class="space-y-4 text-gray-500 leading-relaxed">
+          <p>We collect the following categories of information:</p>
+          <p class="text-charcoal font-medium">Account information</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>If you play as a Guest: no personal information, just an anonymous, device-local identifier</li>
+            <li>If you sign in with Apple or Google: the email address provided by that identity provider (which may be a private relay address from Apple) and, where provided, your name</li>
+          </ul>
+          <p class="text-charcoal font-medium">Profile data</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>An auto-generated, immutable username</li>
+            <li>Your chosen display name</li>
+            <li>An optional avatar image URL</li>
+            <li>An optional country code</li>
+          </ul>
+          <p class="text-charcoal font-medium">Social data</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Your friends list and pending friend requests</li>
+          </ul>
+          <p class="text-charcoal font-medium">Gameplay data</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Match history</li>
+            <li>Ranked rating, calculated using the Glicko-2 system</li>
+            <li>Win/loss record and lifetime stats</li>
+          </ul>
+          <p class="text-charcoal font-medium">Technical &amp; diagnostic information</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Crash reports and error diagnostics, captured automatically when the app encounters a problem</li>
+            <li>Product usage events (for example, starting a match), captured automatically to help us understand how the game is used</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-4">3. How We Collect Information</h2>
+        <div class="space-y-4 text-gray-500 leading-relaxed">
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong class="text-charcoal font-medium">Directly from you:</strong> when you set up your profile, choose a display name or avatar, send a friend request, or play a match.</li>
+            <li><strong class="text-charcoal font-medium">Via Apple or Google sign-in:</strong> if you choose to sign in, we receive your email address and, where you allow it, your name from the identity provider. If you sign in with Apple and choose "Hide My Email", we only receive Apple's private relay address.</li>
+            <li><strong class="text-charcoal font-medium">Automatically:</strong> our crash-reporting and analytics providers collect technical information (such as device type and app events) and diagnostic information (such as crash reports) needed to keep the game running and to fix bugs.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-4">4. How We Use Your Information</h2>
+        <div class="space-y-4 text-gray-500 leading-relaxed">
+          <p>We use your information to:</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Provide and maintain Deal Estate, including offline and online matches</li>
+            <li>Match you with opponents and maintain the ranked leaderboard</li>
+            <li>Support friends and social features within the app</li>
+            <li>Diagnose and fix bugs, crashes, and performance issues</li>
+            <li>Send service-related communications, such as turn-change or match-activity push notifications, where enabled</li>
+          </ul>
+          <p>
+            We do not sell your personal information. We do not use your data for advertising, and we do not share it with data brokers.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-4">5. Third-Party Services</h2>
+        <div class="space-y-4 text-gray-500 leading-relaxed">
+          <p>We rely on the following third-party services to operate Deal Estate:</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong class="text-charcoal font-medium">Supabase:</strong> provides authentication, database, and realtime infrastructure for the app. Your account and gameplay data is stored behind row-level security policies that ensure you can only access your own data. See <a href="https://supabase.com/privacy" class="text-teal-700 hover:underline" target="_blank" rel="noopener">Supabase's Privacy Policy</a>.</li>
+            <li><strong class="text-charcoal font-medium">OneSignal:</strong> delivers push notifications (turn-change and match alerts) by wrapping Apple Push Notification service (APNs) and Firebase Cloud Messaging (FCM). Push notifications are optional and can be disabled at any time in your device settings. See <a href="https://onesignal.com/privacy_policy" class="text-teal-700 hover:underline" target="_blank" rel="noopener">OneSignal's Privacy Policy</a>.</li>
+            <li><strong class="text-charcoal font-medium">PostHog:</strong> captures explicit, named product-usage events (for example, starting or finishing a match) so we can understand how the game is used. We do not use session replay or automatic event capture. See <a href="https://posthog.com/privacy" class="text-teal-700 hover:underline" target="_blank" rel="noopener">PostHog's Privacy Policy</a>.</li>
+            <li><strong class="text-charcoal font-medium">Sentry:</strong> captures crash reports and error diagnostics from the app, and separately from our backend server functions, so we can identify and fix bugs. See <a href="https://sentry.io/privacy" class="text-teal-700 hover:underline" target="_blank" rel="noopener">Sentry's Privacy Policy</a>.</li>
+            <li><strong class="text-charcoal font-medium">Apple Sign-In &amp; Google Sign-In:</strong> optional identity providers. When you choose to sign in with Apple or Google, the provider sends us your email address and, where you allow it, your name. Their handling of the sign-in is governed by their own privacy policies.</li>
+          </ul>
+          <p>Each third-party service is governed by its own privacy policy. We encourage you to review them.</p>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-4">6. Cookies &amp; Local Storage</h2>
+        <div class="space-y-4 text-gray-500 leading-relaxed">
+          <p>
+            The Deal Estate app itself does not use browser cookies. It stores a small amount of data locally on your device, such as your anonymous Guest identifier and session tokens for signed-in accounts.
+          </p>
+          <p>
+            This page is hosted on zondostudios.com, which loads the Inter typeface from Google Fonts. See our site-wide <a href="/privacy" class="text-teal-700 hover:underline">Privacy Policy</a> for details on cookies and third parties used by the zondostudios.com website itself; this section covers only the Deal Estate app.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-4">7. Data Security</h2>
+        <div class="space-y-4 text-gray-500 leading-relaxed">
+          <p>We take reasonable steps to protect your information from unauthorised access, modification, or disclosure:</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>All connections between the app and our backend are encrypted via HTTPS/TLS</li>
+            <li>Row-level security policies ensure each account can only access its own data</li>
+            <li>Authentication tokens are stored using your device's secure, encrypted storage</li>
+          </ul>
+          <p>
+            No system is perfectly secure. If we ever become aware of a data breach affecting your information, we will notify you and any required authorities in accordance with applicable law.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-4">8. Data Retention &amp; Deletion</h2>
+        <div class="space-y-4 text-gray-500 leading-relaxed">
+          <p>
+            Your data is retained for as long as your account is active. To request deletion of your account and associated data, contact us at <a href="mailto:help@zondostudios.com" class="text-teal-700 hover:underline">help@zondostudios.com</a>; we will delete your account and gameplay data within a reasonable timeframe of a verified request.
+          </p>
+          <p>
+            Some data held by third-party providers (for example, crash and analytics logs at Sentry or PostHog) is governed by those providers' own retention schedules and may persist for a limited period after your account is deleted.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-4">9. Your Rights</h2>
+        <div class="space-y-4 text-gray-500 leading-relaxed">
+          <p>You have the right to:</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Access the personal information we hold about you</li>
+            <li>Correct any inaccurate or out-of-date information</li>
+            <li>Request deletion of your account and associated data</li>
+            <li>Withdraw consent for push notifications at any time from your device settings</li>
+          </ul>
+          <p>
+            If you live in a country with additional statutory privacy rights (for example the EU/UK's GDPR, California's CCPA, or Australia's Privacy Act), those rights also apply and are not waived by this policy. Contact us using the details below to exercise any of them.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-4">10. Children's Privacy</h2>
+        <div class="space-y-4 text-gray-500 leading-relaxed">
+          <p>
+            Deal Estate is a general-audience game and is not directed at or marketed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-4">11. International Transfers</h2>
+        <div class="space-y-4 text-gray-500 leading-relaxed">
+          <p>
+            Deal Estate is operated from Australia, but our service providers may process and store data in other countries, including the United States. Where we transfer personal information outside your country of residence, we rely on our providers' standard contractual safeguards and certifications to protect your data to a comparable standard.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-4">12. Changes to This Policy</h2>
+        <div class="space-y-4 text-gray-500 leading-relaxed">
+          <p>
+            We may update this Privacy Policy from time to time. When we make changes, we will update the "Last updated" date at the top of this page. For material changes, we will give reasonable notice in-app where practicable. We encourage you to review this policy periodically.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-4">13. Contact Us</h2>
+        <div class="space-y-4 text-gray-500 leading-relaxed">
+          <p>
+            If you have questions about this Privacy Policy or wish to exercise your privacy rights, please contact us at:
+          </p>
+          <p>
+            <a href="mailto:help@zondostudios.com" class="text-teal-700 hover:underline">help@zondostudios.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
