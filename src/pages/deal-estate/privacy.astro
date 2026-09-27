@@ -3,7 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import Nav from "../../components/Nav.astro";
 import Footer from "../../components/Footer.astro";
 
-const lastUpdated = "24 September 2026";
+const lastUpdated = "27 September 2026";
 ---
 
 <Layout
@@ -42,7 +42,7 @@ const lastUpdated = "24 September 2026";
           <p>We collect the following categories of information:</p>
           <p class="text-charcoal font-medium">Account information</p>
           <ul class="list-disc pl-6 space-y-2">
-            <li>If you play as a Guest: no personal information, just an anonymous, device-local identifier</li>
+            <li>If you play as a Guest: an anonymous account is created on our servers, identified by a random ID rather than any personal details. Your profile, gameplay and social data (below) are stored against it the same way as for signed-in players.</li>
             <li>If you sign in with Apple or Google: the email address provided by that identity provider (which may be a private relay address from Apple) and, where provided, your name</li>
           </ul>
           <p class="text-charcoal font-medium">Profile data</p>
@@ -55,6 +55,8 @@ const lastUpdated = "24 September 2026";
           <p class="text-charcoal font-medium">Social data</p>
           <ul class="list-disc pl-6 space-y-2">
             <li>Your friends list and pending friend requests</li>
+            <li>Chat messages you send during online matches, which are visible to the other players in that match</li>
+            <li>Players you have blocked, and reports you submit about other players. If you report a chat message, a copy of that message is kept with the report so we can review it.</li>
           </ul>
           <p class="text-charcoal font-medium">Gameplay data</p>
           <ul class="list-disc pl-6 space-y-2">
@@ -74,7 +76,7 @@ const lastUpdated = "24 September 2026";
         <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-4">3. How We Collect Information</h2>
         <div class="space-y-4 text-gray-500 leading-relaxed">
           <ul class="list-disc pl-6 space-y-2">
-            <li><strong class="text-charcoal font-medium">Directly from you:</strong> when you set up your profile, choose a display name or avatar, send a friend request, or play a match.</li>
+            <li><strong class="text-charcoal font-medium">Directly from you:</strong> when you set up your profile, choose a display name, send a friend request, chat in a match, block or report a player, or play a match.</li>
             <li><strong class="text-charcoal font-medium">Via Apple or Google sign-in:</strong> if you choose to sign in, we receive your email address and, where you allow it, your name from the identity provider. If you sign in with Apple and choose "Hide My Email", we only receive Apple's private relay address.</li>
             <li><strong class="text-charcoal font-medium">Automatically:</strong> our crash-reporting and analytics providers collect technical information (such as device type and app events) and diagnostic information (such as crash reports) needed to keep the game running and to fix bugs.</li>
           </ul>
@@ -105,7 +107,7 @@ const lastUpdated = "24 September 2026";
           <ul class="list-disc pl-6 space-y-2">
             <li><strong class="text-charcoal font-medium">Supabase:</strong> provides authentication, database, and realtime infrastructure for the app. Your account and gameplay data is stored behind row-level security policies that ensure you can only access your own data. See <a href="https://supabase.com/privacy" class="text-teal-700 hover:underline" target="_blank" rel="noopener">Supabase's Privacy Policy</a>.</li>
             <li><strong class="text-charcoal font-medium">OneSignal:</strong> delivers push notifications (turn-change and match alerts) by wrapping Apple Push Notification service (APNs) and Firebase Cloud Messaging (FCM). Push notifications are optional and can be disabled at any time in your device settings. See <a href="https://onesignal.com/privacy_policy" class="text-teal-700 hover:underline" target="_blank" rel="noopener">OneSignal's Privacy Policy</a>.</li>
-            <li><strong class="text-charcoal font-medium">PostHog:</strong> captures explicit, named product-usage events (for example, starting or finishing a match) so we can understand how the game is used. We do not use session replay or automatic event capture. See <a href="https://posthog.com/privacy" class="text-teal-700 hover:underline" target="_blank" rel="noopener">PostHog's Privacy Policy</a>.</li>
+            <li><strong class="text-charcoal font-medium">PostHog:</strong> captures explicit, named product-usage events (for example, starting or finishing a match) so we can understand how the game is used. We also record basic app lifecycle events (such as the app being opened or closed). We do not use session replay or automatically capture your taps or screens. See <a href="https://posthog.com/privacy" class="text-teal-700 hover:underline" target="_blank" rel="noopener">PostHog's Privacy Policy</a>.</li>
             <li><strong class="text-charcoal font-medium">Sentry:</strong> captures crash reports and error diagnostics from the app, and separately from our backend server functions, so we can identify and fix bugs. See <a href="https://sentry.io/privacy" class="text-teal-700 hover:underline" target="_blank" rel="noopener">Sentry's Privacy Policy</a>.</li>
             <li><strong class="text-charcoal font-medium">Apple Sign-In &amp; Google Sign-In:</strong> optional identity providers. When you choose to sign in with Apple or Google, the provider sends us your email address and, where you allow it, your name. Their handling of the sign-in is governed by their own privacy policies.</li>
           </ul>
@@ -117,7 +119,7 @@ const lastUpdated = "24 September 2026";
         <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-4">6. Cookies &amp; Local Storage</h2>
         <div class="space-y-4 text-gray-500 leading-relaxed">
           <p>
-            The Deal Estate app itself does not use browser cookies. It stores a small amount of data locally on your device, such as your anonymous Guest identifier and session tokens for signed-in accounts.
+            The Deal Estate app itself does not use browser cookies. It stores a small amount of data locally on your device, such as the session tokens that keep you signed in (including as a Guest).
           </p>
           <p>
             This page is hosted on zondostudios.com, which loads the Inter typeface from Google Fonts. See our site-wide <a href="/privacy" class="text-teal-700 hover:underline">Privacy Policy</a> for details on cookies and third parties used by the zondostudios.com website itself; this section covers only the Deal Estate app.
