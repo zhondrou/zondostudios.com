@@ -1,0 +1,90 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
+
+const lastUpdated = "18 October 2026";
+---
+
+<Layout
+  title="Delete your Deal Estate account | Zondo Studios"
+  description="How to delete your Deal Estate account and data, in the app or by email, without needing the app installed."
+>
+  <Nav />
+
+  <section class="pt-32 pb-12">
+    <div class="max-w-3xl mx-auto px-6">
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight gradient-text">Delete your Deal Estate account</h1>
+      <p class="mt-4 text-gray-500 leading-relaxed">For players of <strong class="text-charcoal font-medium">Deal Estate</strong> by <strong class="text-charcoal font-medium">Zondo Studios</strong>.</p>
+      <p class="mt-2 text-sm text-gray-500 font-mono">Last updated {lastUpdated}</p>
+    </div>
+  </section>
+
+  <section class="pb-32">
+    <div class="max-w-3xl mx-auto px-6 space-y-12">
+      <div>
+        <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-4">Delete in the app (fastest)</h2>
+        <div class="space-y-4 text-gray-500 leading-relaxed">
+          <ol class="list-decimal pl-6 space-y-2">
+            <li>Open Deal Estate and tap your name at the top of the main menu to open your Profile.</li>
+            <li>Scroll down and tap <strong class="text-charcoal font-medium">Delete account</strong>, then confirm.</li>
+          </ol>
+          <p>This takes effect immediately and cannot be undone.</p>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-4">Request deletion without the app</h2>
+        <div class="space-y-4 text-gray-500 leading-relaxed">
+          <ol class="list-decimal pl-6 space-y-2">
+            <li>
+              Email <a href="mailto:help@zondostudios.com?subject=Delete%20my%20Deal%20Estate%20account" class="text-teal-700 hover:underline">help@zondostudios.com</a> with the subject <strong class="text-charcoal font-medium">"Delete my Deal Estate account"</strong>.
+            </li>
+            <li>Send it from the email address linked to your Sign in with Apple or Google account, or include your in-game display name, so we can find the account.</li>
+          </ol>
+          <p>We'll delete the account and confirm by email within 30 days.</p>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-4">What gets deleted</h2>
+        <div class="space-y-4 text-gray-500 leading-relaxed">
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Your profile: display name, country and avatar</li>
+            <li>Your friends and social data</li>
+            <li>Your stats, rating and match history</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-4">What may be kept for a while</h2>
+        <div class="space-y-4 text-gray-500 leading-relaxed">
+          <p>
+            Crash reports and analytics events held by our service providers (Sentry and PostHog) are deleted on those providers' own retention schedules and may stay for a limited period after your account is gone. They are not used to identify you.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-4">Guest play</h2>
+        <div class="space-y-4 text-gray-500 leading-relaxed">
+          <p>
+            Guest progress is stored only on your device. Deleting the app removes it, so no request is needed.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-semibold text-teal-600 tracking-wide uppercase mb-4">More information</h2>
+        <div class="space-y-4 text-gray-500 leading-relaxed">
+          <p>
+            For details on what we collect and how we handle it, see the <a href="/deal-estate/privacy" class="text-teal-700 hover:underline">Deal Estate Privacy Policy</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
